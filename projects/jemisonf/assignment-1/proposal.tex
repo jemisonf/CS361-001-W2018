@@ -38,7 +38,8 @@ To solve this, we propose creating a c++ program that can convert markdown to pd
 		\end{itemize}
 	\subsection{Methodology}
 		Each component will be encapsulated in a c++ library. Components will have methods to allow them to both communicate with other c++ objects and to output data to standard output so they can communcate with non-c++ programs.
-
+\section{Challenges}
+The single biggest immediate challenge for this project will be writing to a PDF file. PDFs do not use a markup language like html or xml so it will not be as easy as writing in those formats. Writing to PDF may also require the use of an external library for encoding data to be stored in the document.
 \section{Stretch Goals}
 	This section contains ideas to expand the project outside of the core architecture.
 	\begin{itemize}
