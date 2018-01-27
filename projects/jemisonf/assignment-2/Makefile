@@ -1,6 +1,6 @@
 # this is a comment
 
-TARGET=proposal
+TARGET=assign2
 
 
 default: pdf
