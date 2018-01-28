@@ -1,4 +1,5 @@
 *.aux
+*.bak
 *.log
 *.pdf
 *.gz
