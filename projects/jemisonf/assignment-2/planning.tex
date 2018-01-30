@@ -3,31 +3,53 @@
 \subsection{Milestones}
 \begin{enumerate}
 	\item Application component that parses markdown files into c++ data
+\newline
+Resources needed: markdown documentation
 	\item Application component that converts md data into pdf data
+\newline
+Resources needed: pdf documentation, Milestone 1
 	\item Application component that converts md data into html and css data
+\newline
+Resources needed: html/css documentation, Milestone 1
 	\item Application component that writes c++ (md/pdf) data to a file
+\newline
+Resources needed: C++ I/O documentation
 	\item Develop command line interface
+\newline
+Resources needed: Prior knowledge about command line, User Experience (UX) material
 \end{enumerate}
-
-%tasks
-%dependencies
-%resources needed
-
+The most important milestones are 1, 2, and 4, since they are necessary to fulfill the goal of our project: creating a pdf from a markdown file. They are ordered chronologically in how they should be completed, since they generally build off each other. Without a way to parse markdown files, we would only be able to generate pdfs using our own C++ data structures, which is not as useful. 
 
 
 \subsection{Schedule/Timeline}
 
 
+\begin{center}
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Milestone & Programmers & Time to Implement \\ \hline
+    1 & Sean, Sonica & 1 week \\ \hline
+    2 & Fischer, Hu & 2 weeks \\ \hline
+    3 & Sean, Sonica & 1.5 weeks \\ \hline
+    4 & Fischer, Hu & 1 week \\ \hline
+    5 & Sean, Sonica & 1 week \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+%\includegraphics[width=500pt]{images/schedule_table.pdf}
+
+
 \subsection{Project Tracking}
-\begin{itemize}
-	\item Check in periodically
-	\item Use github issue system
-	\item Use lots of tests
-\end{itemize}
+To keep track of our progress, we will check in with each other, in class, meetings, or on slack/email. We will use the github issue system to keep track of what's completed, and what needs to be done still. We are planning on incorporating Test Driven Design, so we plan on writing tests first that can evaluate our output.
+
 
 \subsection{Risk Management}
-\begin{itemize}
-	\item Misunderstandings about project design and how components are supposed to work together
-	\item Problems understanding the technologies used
-	\item Feature creep/modifying the design continually
-\end{itemize}
+These risks are serious because they all can result in divergence in our work, and making the development take longer.
+\subsubsection{Misunderstandings about project design}
+One of the most likely problems that we will run into is misunderstandings about how components are supposed to work together, due to incomplete design. To solve this, we will communicate frequently if we are unsure about a part of our design.
+\subsubsection{Problems understanding the technologies used}
+All of the technologies we are using have lots of documentation on the internet, so it probably won't be a problem finding resources. There will still be sources of confusion though, so we can report on our research in meetings.
+\subsubsection{Feature creep/modifying the design continually}
+This is less serious than the other two main risks, but it can still cause development to take longer than it should. We will solve this by focusing on finishing what we decided to work on already.
