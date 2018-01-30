@@ -1,6 +1,6 @@
 # this is a comment
 
-TARGET=assign2
+TARGET=mdrender-SRP
 
 
 default: pdf
