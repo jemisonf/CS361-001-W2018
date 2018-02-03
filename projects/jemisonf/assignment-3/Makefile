@@ -1,9 +1,12 @@
 # this is a comment
 
-TARGET=mdrender-SRP
+TARGET=mdrender-SDSUI
 
 
-default: pdf
+default: pdflatex
+
+pdflatex: ${TARGET}.tex
+	pdflatex ${TARGET}.tex
 
 bib: bib
 	bibtex ${TARGET}
@@ -18,7 +21,7 @@ dvi: ${TARGET}.tex
 ps: dvi
 	dvips -R -Poutline -t letter ${TARGET}.dvi -o ${TARGET}.ps
 
-pdf: ps
+ps2pdf: ps
 	ps2pdf ${TARGET}.ps
 
 clean-dvi:
