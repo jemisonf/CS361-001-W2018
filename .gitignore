@@ -7,3 +7,5 @@
 *.toc
 *.dvi
 *.ps
+*.uml~
+*.out
