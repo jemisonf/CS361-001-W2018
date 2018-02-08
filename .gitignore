@@ -9,3 +9,4 @@
 *.ps
 *.uml~
 *.out
+.DS_Store
