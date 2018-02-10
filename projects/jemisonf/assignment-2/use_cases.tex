@@ -28,8 +28,8 @@ The main error scenerios could occur between any of the conversion points. For i
 \end{itemize}
 \textbf{Quality Requirements:} 
 \begin{itemize}
-\item The user will be notified of any issues in the conversion
-\item The system will process the C++ data in timely manner, depending on the input size 
+\item The user will be notified of any issues in the conversion between C++ data and either to the PDF and the HTML. If there are errors in the conversion the user will be notified and re-prompted if they could remedy the situation such as with a file misread.
+\item The system will process the C++ data in timely manner, depending on the input size. If the process ends up taking too long given a large input, the user has the choice to exit. 
 \end{itemize}
 \textbf{Use Case Name:} PDF Output  
 \\
@@ -57,9 +57,9 @@ The main error scenerios could occur between any of the conversion points. For i
 \end{itemize}
 \textbf{Quality Requirements:} 
 \begin{itemize}
-\item The user will be notified of any issues in the conversion
-\item The system will process the pdf data in timely manner, depending on the input size 
-\item The pdf version will accurately represent the markdown that the user had originally provided
+\item The user will be notified of any issues in the conversion. Then with any errors such as file-misread, the user will be notified, and depending on issue reprompted. 
+\item The system will process the pdf data in timely manner, depending on the input size. With a large input the time may be longer and so the user would have the option to halt the process. 
+\item The pdf version will accurately represent the markdown that the user had originally provided. With any differences caused by errors, the user would be notified and so is made aware.
 %
 \end{itemize} 
 \textbf{Use Case Name:} .html/.css Output  
@@ -88,9 +88,9 @@ The main error scenerios could occur between any of the conversion points. For i
 \end{itemize}
 \textbf{Quality Requirements:} 
 \begin{itemize}
-\item The user will be notified of any issues in the conversion
-\item The system will process the .html/.css data in timely manner, depending on the input size 
-\item The .html/.css version will accurately represent the markdown that the user had originally provided
+\item The user will be notified of any issues in the conversion. Again with any issues that could be fixed with user input such file read in, the user will be reprompted. 
+\item The system will process the .html/.css data in timely manner, depending on the input size. If time ends up taking longer than user wished due to lengthly input, the user has the option to stop the conversion.  
+\item The .html/.css version will accurately represent the markdown that the user had originally provided. With any known errors that lead to differences, the user will be notified. 
 %
 \end{itemize} 
 
