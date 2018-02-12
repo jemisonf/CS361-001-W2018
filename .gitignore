@@ -9,4 +9,6 @@
 *.ps
 *.uml~
 *.out
+*.bbl
+*.blg
 .DS_Store
