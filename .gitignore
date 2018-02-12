@@ -9,3 +9,5 @@
 *.ps
 *.uml~
 *.out
+*.bbl
+*.blg
