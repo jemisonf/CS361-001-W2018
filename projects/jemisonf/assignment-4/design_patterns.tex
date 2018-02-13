@@ -1,2 +1,14 @@
 \section{Design Patterns}
-Design patterns book fact~\cite{designpatterns}
+
+The main design pattern that would be useful for our assignment is the Builder pattern.
+
+A "Builder" is used to abstract the construction of a object instance away from the client software that is building that object; it provides an interface for constructing the object one step at a time, and allows the client to get the completed version when it is finished~\cite{designpatterns}.
+
+This would have three application in our project: 
+\begin{itemize}
+  \item Building MdData objects
+  \item Building PDF data output
+  \item Building HTML data output
+\end{itemize}
+
+Each of these would have their own implementation, but could be based on a single Builder superclass from which the MdData builder and so on would inherit from. The MdDataBuilder would be owned by the MdToCpp class, the PdfBuilder would be owned by the CppToPdf class, and so on. Each class would use the corresponding builder class to create its output data as it processed the input stream or c++ data it was passed.
