@@ -1,1 +1,6 @@
 \section{Exceptions and Handling}
+\begin{itemize}
+\item The user supplies a markdown document to the program that they want to be outputted into a different form. However, if the user provides a markdown file with different encoding than what the program had expected, the program would not know how proceed and parse it. So, the program would display an error message indicating the issue and the user would have the option to resubmitt a corrected document.  
+\item Within the document itself, the user may provide one that is not properly formatted. This could mean that it is missing key elements that would differentiate certain elements and give it special properties such as that with a table having pipes. The program would then not be able to know what the user meant and so would just output the plain text without the special formatting. Upon reviewing the document, the user can look at the output and compare it to what they wanted. If it did not meet their expectations, the could resubmitt it. 
+\item The classes may run into issues communicating with each other like when sending the C++ data to the class that deals with converting the document to the specified output. The program would then display an error message indicating the miscommunication to the user and allow them to try again.  
+\end{itemize}
