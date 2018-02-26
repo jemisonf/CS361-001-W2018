@@ -1,13 +1,12 @@
 # this is a comment
 
-TARGET=assn5-ussa
-
+TARGET=mdrender-USSA
 
 default: pdflatex
 
 pdflatex: ${TARGET}.tex
 	pdflatex ${TARGET}.tex
-	bibtex ${TARGET}
+	#bibtex ${TARGET}
 	pdflatex ${TARGET}.tex
 	pdflatex ${TARGET}.tex
 
