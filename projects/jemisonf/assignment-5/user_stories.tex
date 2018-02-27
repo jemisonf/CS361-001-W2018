@@ -10,20 +10,25 @@ In conclusion, while writing PDF output is possible, it may not be technically f
 
 %5 --> Outputting CSS
 \subsection{Outputting CSS}
+To output a file in HTML with CSS styling, when the user gives their file, they will also provide a CSS link. So, first the markdown file will be sent to be parsed into C++ data. This data will then return to the command line interface that would then send it to be converted into the HTML data. Then again this data will be returned to the command line interface. This time when the HTML data is sent out to the output, it will also contain the CSS styling referense that the user had initially provided.  
 \hspace{-5cm}\includegraphics[width=700pt]{images/Output.png}
 
 %6 --> Getting Help
 \subsection{Getting Help}
+If the user is unsure of how to use the program, they can request help by typing the flag '--help'. The command line interface would then take this in and return the instructions of how to use the program. This would include the flags that specify HTML output, C++ data output, standard out output, and pdf output. Additionally, it will show them the flags used to specify the name of the file that they want thier markdown to be converted and stored into. 
 \hspace{-2cm}\includegraphics[width=450pt]{images/GettingHelp.png}
 
 %7 --> Specifying the File
 \subsection{Specifying the File}
+The user needs to provide a markdown file and so they enter the name of the file then the command line interface searches for the file and sends it to be converted into the c++ data, which starts the whole conversion process.
 \hspace{-2cm}\includegraphics[width=500pt]{images/SpecifyingFile.png}
 
 %8 --> Specifying the Output Type
 \subsection{Specifying the Output Type}
+The user has different options of what to do with their file. They could have thier markdown be parsed into pdf data or html (both of which require it to be converted into C++ data first). To do this, if the user wants an html file, they would enter the flag: '--html' after their markdown file name. This would cause the command line to send the markdown file to be converted into c++ data and then send it back to the command line which would send it to be converted into HTML data, since that was the flag that the user specified. The only difference if the user wanted pdf would be the flag: '--pdf' then after the markdown is parsed into c++, it would be sent to be parsed into pdf data, as per user request.
 \hspace{-3cm}\includegraphics[width=550pt]{images/SpecifyingOutputFile.png}
 
 %9 --> Specifying the Output Name 
 \subsection{Specifying the Output Name}
+If the user would like to specify what they want their new file representing thier markdown data to be called, they could do this by entering the name of desired file after their markdown file name. This would then be sent to the command interface and then to the markdown to c++ class to store the name for future retrieval. It would also be outputted under this name.
 \hspace{-3cm}\includegraphics[width=500pt]{images/SpecifyingOutputName.png}
