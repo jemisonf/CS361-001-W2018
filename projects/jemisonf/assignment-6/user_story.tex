@@ -1,1 +1,53 @@
 \section{User Story}
+This week we had three user stories due: Basic Markdown, Displaying Output, and Outputting HTML
+
+\subsection{Basic Markdown}
+This portion of the assignment deals with creating the mddata class type. The user will provide the name of a markdown file, which file will then contain the text and styling contents that we would to convert. So, then we need to be able to store the text and styling information with the mddata class type so that it can also be easily accessed by the other components such as when the conversions happen. \newline 
+
+\noindent Worked on by: Fischer and Hu \newline
+
+\noindent Problems: For this portion of the assignment a problem that occured was more deciding how to store the information. The text needs to be stored into something whether that be a linked list or a vector for easy movement between components and then access and retrieval within the different components. But then after meeting as a group, it was decided to store the information into a queue system. \newline
+
+\noindent Time Length: This portion of the assignment took about a few hours because the structure to be decided as a group and then implented through the pair programming. \newline
+
+\noindent Current Status: The class structures has been already laid out and implemented as the header files. So, then all that needs to be worked is streaming the file'stext into the nodes. The nodes for the for the lists have been and are being currently tested. \newline
+
+\noindent What is left: Streaming the markdown file's text to the nodes and completing the testing with the nodes. \newline
+
+\noindent Usefulness of diagram: The diagrams helped provide a layout of the function of the program as a whole which helped determine which structure to use between vectors and queues. \newline
+
+\noindent Diagrams we wish we had: There had not been any diagrams we wished we had because this term we had been looking through a variety of diagrams to further understand this problem. \
+
+\subsection{Displaying Output}
+This portion of the assignment dealt with formatting the text in a way so that it could also be outputted to the screen. So, before the documents (whether pdf or html) are actually outputted, it needs to be formatted so that it will be good to output for user use. \newline
+
+\noindent Worked on by: Since the text needs to go through a variety of processto be formatted all of us worked on this part. For instance, the text needs to be stored and read in correctly which was worked by Fischer and Hu, while there also needs to be a conversion happening which was worked on by Sean and Sonica. \newline
+
+\noindent Problems: For this portion there was no problems because by this point the text is what you want the text to be and so it just gets outputted. \newline
+
+\noindent Time Length: This portion of the assignment had also taken few hours because it involved the components described earlier to store the information and it involves the component described next because the data then needs to be parsed. \newline
+
+\noindent Current Status: This is still a work in progress because the the HTML is not yet fully implemented and once it is, we will be able to use that to output to the user. \newline
+
+\noindent What is left: The component that is left is to finish the next component so that this component could be fully utilized. \newline
+
+\noindent Usefulness of diagram: The diagrams were useful in this case because it helped with the over structure so then we knew what the output should expect/ would be passed to it. \newline
+
+\noindent Diagrams we wish we had: There were no other additional diagrams we wish had because of the prior brainstorming and prep that we had done through the designing this term. 
+ 
+\subsection{Outputting HTML}
+This portion of the assignment dealt with outputting the document in HTML. So, after the markdown document was converted into HTML data, it would be outputted as an HTML document. \newline
+
+\noindent Worked on By: This part was worked on by Sean and Sonica. \newline
+
+\noindent Problems: Since this portion of the assignment dealt with first parsing the HTML data so that it would be properly formatted to be outputted to the user, the parsing itself was not as big of a problem as thinking about how the data would be stored and then retrieved. \newline
+
+\noindent Time Length: This part also took a few hours. \newline
+
+\noindent Current Status: This part is still being implemented but some of the parts of markdown to HTML have been done like the lists and formatting. \newline
+
+\noindent What is left: There are some stuff that need to be implemented such as looking at the special formatting of the text such underlinings. \newline
+
+\noindent Usefulness of diagram: The diagrams were kinda useful in seeing the interactions between this class with the command line and the output to give us a general understanding before going into the implementation. \newline
+
+\noindent Diagrams we wish we had: There were no other diagrams we wished we had because we had a diagram for each component and then the sequence diagrams showing use the connectivity. 
