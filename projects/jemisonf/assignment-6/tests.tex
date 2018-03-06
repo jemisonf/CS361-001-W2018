@@ -1,1 +1,23 @@
 \section{Tests}
+
+For our tests, we used the googletest framework, which hugely simplified setting up and executing tests. For each test, we created a Test object, which has methods that are used to set up variables before running each test. Then, we used macros defined by googletest to quickly create new test code.
+
+\subsection{MdData (Unit Test)}
+
+This unit test tested the MdData object, which creates an interface for a queue of text nodes, where each text node represents a line of text in a markdown file, allowing users to easily store, access, and share data from a markdown file.
+
+The input for each test was an empty MdData object initialized by our MdDataTest object.
+
+To design our tests, we tested every interface method for MdData: front\_node(), empty(), enqueue\_node(), and dequeue\_node(). 
+
+The tests were ultimately successful, but writing them revealed some issues with our initial design. For example, we intially used an std::vector object internally to store text nodes within the MdData object, but we found that an std::queue was a better choice for this implementation.
+
+\subsection{MdToCpp (Acceptance Test)}
+
+This test tested the MdToCpp object, which converted a markdown file into an MdData object, fulfilling one of our user stories.
+
+The input for our tests was a file called headers.md in the testfiles directory, which contains example header markdown as well as some text.
+
+To design our tests, we tested the public methods of our object; because it only had two (set\_filestream() and get\_md\_data()) we could use one test case to check that we were able to assign a filestream to the object and then parse that file.
+
+The tests were not ultimately successful, as we were not able to complete our implementation of the class in time. However, we used to test to lay out a path for development for the class.
