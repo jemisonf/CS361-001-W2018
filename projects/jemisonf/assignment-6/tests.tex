@@ -21,3 +21,13 @@ The input for our tests was a file called headers.md in the testfiles directory,
 To design our tests, we tested the public methods of our object; because it only had two (set\_filestream() and get\_md\_data()) we could use one test case to check that we were able to assign a filestream to the object and then parse that file.
 
 The tests were not ultimately successful, as we were not able to complete our implementation of the class in time. However, we used to test to lay out a path for development for the class.
+
+\subsection{CppToHtml (Unit Test)}
+
+We have not yet finished the CppToHtml object, but we wrote a unit test for it.
+
+Our test function generates a MdData object, and then tries to run CppToHtml on it to get a string of HTML output. It then compares this string with input from our testfiles/prewritten_out/ folder. 
+
+During the test's execution, it calls CppToHtml's public set_data() and get_html() functions.
+
+The test did not pass, because we have not yet implemented the CppToHtml conversion functionality. However, when we do, it will be simple to test.
