@@ -11,6 +11,7 @@ expand: ${INPUT}
 pdflatex: ${TARGET}.tex
 	pdflatex ${TARGET}.tex
 	#bibtex ${TARGET}
+	pdflatex ${TARGET}.tex
 
 bib: bib
 	bibtex ${TARGET}
