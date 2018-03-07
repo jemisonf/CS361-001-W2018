@@ -43,7 +43,6 @@ clean-pdf: clean-ps
 	rm -f ${TARGET}.bbl
 	rm -f ${TARGET}.blg
 	rm -f ${TARGET}.pdf
-	rm -f ${TARGET}.tex
 
 
 clean: clean-pdf
