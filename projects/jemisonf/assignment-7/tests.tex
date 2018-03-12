@@ -1,1 +1,8 @@
 \section{Tests}
+\subsection{CppToHtml (Unit Test)}
+
+Our test function generates a MdData object (without using a MdToCpp converter, so we know that the input will not change if MdToCpp changes), and then tries to run CppToHtml on it to get a string of HTML output. It then compares this string with input from our testfiles/prewritten/out/  folder. 
+
+During the test's execution, it calls CppToHtml's public set\_data() and get\_html() functions.
+
+The test passed because CppToHtml is now implemented.
