@@ -1,4 +1,5 @@
 \section{Refactoring}
+
 We did not make any significant revisions to our code. However, we did revise our strategy for compiling our tests. Instead of only having an invididual Makefile for each package, we now have a Makefile at the base of the project that can be used to compile and then run all tests at once. We also used a utility offered by Googletest to extract the main function from each of our tests and make individual tests more modular.
 
 We did move the setup for the CppToHtmlTest into its own function, so that it is easier to understand and modify.
