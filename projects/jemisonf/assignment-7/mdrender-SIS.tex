@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\title{Implementation 2 Assignment}
+\author{Fischer Jemison (jemisonf), Sean Gillen (gillens), \\
+Sonica Gupta (guptaso), Dingzhi Hu (hudin) }
+
+\begin{document}
+\maketitle
+\centerline{\url{https://github.com/jemisonf/CS361-001-W2018}}
+\tableofcontents
+
+\section{Product Release}
+
+Our repo can be cloned from \url{https://github.com/jemisonf/mdrender}
+
+To use the project, clone the repository, then run "make" in the base directory. This will compile all of the tests and generate linker files for each component of the project. You can also enter the directory for each package (actions, filedata, or interface) and compile individual tests for those parts of the project. If you run make in the interface directory, it will compile an "mdrender" binary that you can use to run the program itself.
+
+Functionality for mdrender is limited, but you can render markdown to html with the format "mdrender [source.md] -html -o [output.html]. \section{User Stories}
+
+\subsection{Specifying the File}
+
+Worked on by: Sonica, Sean
+
+Sean and Sonica collaborated remotely via Slack and Github to work on this project. They were also able to work together directly at team meetings.
+
+This only took a few hours of work because it mainly involved piecing together existing files. It was also done concurrently with the "Specifying the Output Type" user story.
+
+Currently, this user story is mostly complete. It works fine if the user enters "-o [filename].html" at the end of their command, but does not handle alternative argument orderings and fails silently if the user does not specify the output filename as .html.
+
+Later work would involve revamping the command line interface to be more responsive to bad input.
+
+\subsection{Specifying the Output Type}
+
+Worked on by: Sonica, Sean
+
+As in the previous user story, Sean and Sonica collaborated both remotely and in person at meetings.
+
+This was also relatively quick, as the program only had to look for a specific flag and was not required to to interpret user input.
+
+This user story currently interprets html just fine. However, it does not handle a -pdf or -stdout option, which was originally going to be part of the project. It also requires that the output type flag appear immediately after the input filename.
+
+It would be nice to handle addtional file types in future versions, but that would require extensive additions to our backend code.
+
+
+
+ \section{Design Changes and Rationale}
+
+We did not make any design changes this week. Iin the previous week, we found that some of our design decisions did not work as we built the components of the application; this week, we were mainly plugging in existing components, so our initial plans for the application design worked really well. \section{Refactoring}
+
+We did not make any significant revisions to our code. However, we did revise our strategy for compiling our tests. Instead of only having an invididual Makefile for each package, we now have a Makefile at the base of the project that can be used to compile and then run all tests at once. We also used a utility offered by Googletest to extract the main function from each of our tests and make individual tests more modular. \section{Tests}
+\subsection{CppToHtml (Unit Test)}
+
+Our test function generates a MdData object (without using a MdToCpp converter, so we know that the input will not change if MdToCpp changes), and then tries to run CppToHtml on it to get a string of HTML output. It then compares this string with input from our testfiles/prewritten/out/  folder. 
+
+During the test's execution, it calls CppToHtml's public set\_data() and get\_html() functions.
+
+The test passed because CppToHtml is now implemented.
+ \section{Meeting Report}
+
+\subsection{Progress made this week}
+This week we had five user stories assigned: Specifying the file, Specifying output type, and Outputting without CSS.\\
+We succeeded in getting these working, to various degrees of functionality: \\
+Specifying the file\\
+Specifying output type\\
+Outputting without CSS\\
+
+
+
+\subsection{Plans for next week}
+We plan to finish these user stories by March 15, this thursday:
+
+ \begin{center}
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    User Story & Units \\ \hline
+    Outputting an HTML partial & .25 \\ \hline
+    Outputting HTML & .25 \\ \hline
+    \end{tabular}
+\end{center}
+
+
+\subsection{Responsibilities}
+Fischer: finish md\_to\_cpp functionality, 2 user stories, design changes and rationales, product release  \\
+Sonica: make command line module, write integration test, document test, add to htmlToCpp to include more formatting\\
+Sean: write meeting report, finish mdToHtml prototype, complete unit test for mdToHtml, user story\\
+
+\subsection{Customer Involvement}
+The customer was willing and able to meet.
+There were not any conflicts about tasks, so the customer was reasonable about assignments.
+
+ 
+
+\end{document}
