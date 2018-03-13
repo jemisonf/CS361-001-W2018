@@ -11,6 +11,6 @@ The test passed because CppToHtml is now implemented.
 \subsection{Integration Test}
 This test tests the components of the program as a whole. The first portion creates the mdData object that would hold the text data. For this test, the text was inputted into the script through an array. The test already has what we expect the output to look like. Then the array of text is outputted to a file and is read by the mdData object. This object then reads in the text and fills it's text nodes, seperating the actual text from the tags. Next, a cppToHtml object is created to convert this seperated text into html data. This process involves converting the tags. Then the string is stored with in the test so that it can be compared to the expected html document. 
 
-The test had called all the objects of the program and the functions that split the data (mdToCpp.set_file) and stored the data (mdData.get_md_data). Then it also generated the html data by looking at the markdown tags (cppToHtml.set_data) and recieved this newly converted data (cppToHtml.get_html).  
+The test had called all the objects of the program and the functions that split the data (mdToCpp.set\_file) and stored the data (mdData.get\_md\_data). Then it also generated the html data by looking at the markdown tags (cppToHtml.set\_data) and recieved this newly converted data (cppToHtml.get\_html).  
 
 This test had passed because the expected html document matched the generated html document.  

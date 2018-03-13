@@ -42,13 +42,27 @@ This user story currently interprets html just fine. However, it does not handle
 
 It would be nice to handle addtional file types in future versions, but that would require extensive additions to our backend code.
 
+\subsection{Outputting HTML without CSS}
 
+Worked on By: This part was worked on by Sean and Sonica. 
 
+Like the other user stories, Sean and Sonica collaborated using various methods.
+
+Problems: There was the issue of deciding which elements are going to be stored in MdData textnode text, or subnodes instead. We settled on leaving the syntax in the TextNode text field.
+
+Time Length: This part took a few hours. 
+
+Current Status: This part is still being implemented but headers and paragraphs are done, along with italics, bold, and strikethough in the testing stage. 
+
+What is left: Depending on how much more of the Markdown spec we plan to implement, there is still work to be done on other syntax elements such as tables, horizontal rules, and images. 
  \section{Design Changes and Rationale}
 
 We did not make any design changes this week. Iin the previous week, we found that some of our design decisions did not work as we built the components of the application; this week, we were mainly plugging in existing components, so our initial plans for the application design worked really well. \section{Refactoring}
 
-We did not make any significant revisions to our code. However, we did revise our strategy for compiling our tests. Instead of only having an invididual Makefile for each package, we now have a Makefile at the base of the project that can be used to compile and then run all tests at once. We also used a utility offered by Googletest to extract the main function from each of our tests and make individual tests more modular. \section{Tests}
+We did not make any significant revisions to our code. However, we did revise our strategy for compiling our tests. Instead of only having an invididual Makefile for each package, we now have a Makefile at the base of the project that can be used to compile and then run all tests at once. We also used a utility offered by Googletest to extract the main function from each of our tests and make individual tests more modular.
+
+We did move the setup for the CppToHtmlTest into its own function, so that it is easier to understand and modify.
+ \section{Tests}
 \subsection{CppToHtml (Unit Test)}
 
 Our test function generates a MdData object (without using a MdToCpp converter, so we know that the input will not change if MdToCpp changes), and then tries to run CppToHtml on it to get a string of HTML output. It then compares this string with input from our testfiles/prewritten/out/  folder. 
@@ -56,6 +70,14 @@ Our test function generates a MdData object (without using a MdToCpp converter, 
 During the test's execution, it calls CppToHtml's public set\_data() and get\_html() functions.
 
 The test passed because CppToHtml is now implemented.
+
+
+\subsection{Integration Test}
+This test tests the components of the program as a whole. The first portion creates the mdData object that would hold the text data. For this test, the text was inputted into the script through an array. The test already has what we expect the output to look like. Then the array of text is outputted to a file and is read by the mdData object. This object then reads in the text and fills it's text nodes, seperating the actual text from the tags. Next, a cppToHtml object is created to convert this seperated text into html data. This process involves converting the tags. Then the string is stored with in the test so that it can be compared to the expected html document. 
+
+The test had called all the objects of the program and the functions that split the data (mdToCpp.set\_file) and stored the data (mdData.get\_md\_data). Then it also generated the html data by looking at the markdown tags (cppToHtml.set\_data) and recieved this newly converted data (cppToHtml.get\_html).  
+
+This test had passed because the expected html document matched the generated html document.  
  \section{Meeting Report}
 
 \subsection{Progress made this week}
